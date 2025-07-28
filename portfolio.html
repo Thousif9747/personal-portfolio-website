@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S Thousif - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
 
@@ -17,17 +21,29 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="nav-controls">
+                <button type="button" class="theme-toggle" id="themeToggle" title="Toggle dark/light theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" title="Toggle mobile menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
     </nav>
     <section id="home" class="hero">
-        <div class="hero-content">
+        <div class="hero-content" data-aos="fade-up">
             <h1>Hi, I'm S Thousif</h1>
-            <p>Web Developer & ECE Student</p>
+            <p class="hero-subtitle">Frontend Developer & ECE Student</p>
+            <p class="hero-description">Aspiring Frontend Developer with hands-on experience in React.js, JavaScript, and AI/IoT projects. Passionate about creating innovative web solutions with clean, user-friendly interfaces</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn">Contact Me</a>
-                
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i> Get In Touch
+                </a>
             </div>
             <div class="social-links">
                 <a href="https://github.com/Thousif9747" target="_blank" rel="noopener" title="Visit my GitHub profile"><i class="fab fa-github"></i></a>
@@ -35,22 +51,87 @@
                 <a href="mailto:thousif9747@gmail.com" title="Send me an email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
     </section>
 
     <section id="about" class="about-section">
         <div class="container">
-            <h2>About Me</h2>
+            <h2 data-aos="fade-up">About Me</h2>
             <div class="about-content">
-                <div class="about-image">
+                <div class="about-image" data-aos="fade-right">
                     <img src="pic.jpg" alt="S Thousif" class="profile-img">
                 </div>
-                <div class="about-text">
-                    <p>Currently pursuing a Bachelor's degree in Electronics and Communication Engineering (ECE), I have developed a strong interest in IT and web development. I am eager to apply my technical skills to web development, with a keen focus on creating efficient and user-friendly websites.</p>
+                <div class="about-text" data-aos="fade-left">
+                    <p>Aspiring Frontend Developer with hands-on experience in HTML, CSS, React.js, and modern JavaScript through personal projects. Built responsive web applications focused on clean, user-friendly interfaces and real-time interactive features. Currently pursuing a Bachelor's degree in Electronics and Communication Engineering (ECE), passionate about delivering high-quality frontend experiences.</p>
+                    
                     <div class="skills">
                         <h3>Technical Skills</h3>
-                        <p>Python, JavaScript, JAVA, HTML, CSS</p>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>JavaScript</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>React.js</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>HTML5/CSS3</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Java</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Bootstrap</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="70"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Git/GitHub</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
                         <h3>Languages</h3>
-                        <p>English, Urdu, Telugu, Hindi</p>
+                        <div class="languages">
+                            <span class="language-tag">English</span>
+                            <span class="language-tag">Urdu</span>
+                            <span class="language-tag">Telugu</span>
+                            <span class="language-tag">Hindi</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -59,44 +140,74 @@
 
     <section id="experience" class="experience-section">
         <div class="container">
-            <h2>Experience & Education</h2>
-                <div class="experience-item">
-                    <h3>B.Tech in Electronics Communication Engineering</h3>
-                    <p>12/2021 - present</p>
-                    <p>Kuppam Engineering College, Kuppam, India</p>
-                    <p>71% (till now)</p>
+            <h2 data-aos="fade-up">Experience & Education</h2>
+            <div class="timeline">
+                <div class="experience-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-marker"></div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3>B.Tech in Electronics Communication Engineering</h3>
+                            <span class="experience-date">12/2021 - present</span>
+                        </div>
+                        <p class="experience-company">Kuppam Engineering College, Kuppam, India</p>
+                        <p class="experience-grade">71% (till now)</p>
+                    </div>
                 </div>
-                <div class="experience-item">
-                    <h3>Intermediate in MPC</h3>
-                    <p>04/2019 04/2021</p>
-                    <p>Balayesu Jr College, Hindupur, India</p>
-                    <p>70%</p>
+                
+                <div class="experience-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-marker"></div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3>Web Development Intern</h3>
+                            <span class="experience-date">07/2024 – 08/2024</span>
+                        </div>
+                        <p class="experience-company">SkillVertex</p>
+                        <ul>
+                            <li>Learned the basics of designing and developing responsive websites</li>
+                            <li>Focused on understanding both front-end and back-end development concepts</li>
+                            <li>Studied principles of creating functional and user-friendly designs</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="experience-item">
-                    <h3>SSC</h3>
-                    <p>03/2018 – 03/2019</p>
-                    <p>Vailakanni Matha Vidyalaya, Hindupur, India</p>
-                    <p>9.7 GPA</p>
+                
+                <div class="experience-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-marker"></div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3>Website Developer Intern</h3>
+                            <span class="experience-date">05/2024 – 06/2024</span>
+                        </div>
+                        <p class="experience-company">Global Education Technology</p>
+                        <ul>
+                            <li>Learned fundamentals of website development</li>
+                            <li>Built responsive designs and integrated interactive features</li>
+                            <li>Explored techniques to improve website performance and visibility</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="experience-item">
-                    <h3>Web Development Intern</h3>
-                    <p>07/2024 – 08/2024</p>
-                    <p>SkillVertex</p>
-                    <ul>
-                        <li>Learned the basics of designing and developing responsive websites</li>
-                        <li>Focused on understanding both front-end and back-end development concepts</li>
-                        <li>Studied principles of creating functional and user-friendly designs</li>
-                    </ul>
+                
+                <div class="experience-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="timeline-marker"></div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3>Intermediate in MPC</h3>
+                            <span class="experience-date">04/2019 - 04/2021</span>
+                        </div>
+                        <p class="experience-company">Balayesu Jr College, Hindupur, India</p>
+                        <p class="experience-grade">70%</p>
+                    </div>
                 </div>
-                <div class="experience-item">
-                    <h3>Website Developer Intern</h3>
-                    <p>05/2024 – 06/2024</p>
-                    <p>Global Education Technology</p>
-                    <ul>
-                        <li>Learned fundamentals of website development</li>
-                        <li>Built responsive designs and integrated interactive features</li>
-                        <li>Explored techniques to improve website performance and visibility</li>
-                    </ul>
+                
+                <div class="experience-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="timeline-marker"></div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3>SSC</h3>
+                            <span class="experience-date">03/2018 – 03/2019</span>
+                        </div>
+                        <p class="experience-company">Vailakanni Matha Vidyalaya, Hindupur, India</p>
+                        <p class="experience-grade">9.7 GPA</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -104,33 +215,441 @@
 
     <section id="projects" class="projects-section">
         <div class="container">
-            <h2>Projects & Achievements</h2>
-                <div class="project-item">
-                    <h3>Smart Device For Monitoring Aspsis And Prediatrics</h3>
-                    <p>Project focused on enhancing quality of life for youngsters and families through medical asepsis monitoring and facility practices.</p>
+            <h2 data-aos="fade-up">Projects & Achievements</h2>
+            <div class="projects-grid">
+                <div class="project-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Smart Sorting System for Fruits and Vegetables</h3>
+                        <p>Developed an AI-based automated sorting system using HuskyLens and NodeMCU ESP32 to classify fruits based on ripeness and quality. Achieved over 95% accuracy with machine vision for real-time detection and sorting.</p>
+                        <div class="project-tags">
+                            <span class="tag">AI Vision</span>
+                            <span class="tag">IoT</span>
+                            <span class="tag">NodeMCU ESP32</span>
+                            <span class="tag">Arduino</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-item">
-                    <h3>Anveshana-2K24</h3>
-                    <p>Participated in ANVESHNA competition in Palamner, India. Provided technical guidance and improved team efficiency.</p>
+                
+                <div class="project-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Rauf – AI Voice Assistant Web App</h3>
+                        <p>Built a multilingual AI voice assistant using React, featuring real-time speech recognition, natural language processing, and voice responses. Supports English, Telugu, and Urdu with weather updates, news, and interactive features.</p>
+                        <div class="project-tags">
+                            <span class="tag">React.js</span>
+                            <span class="tag">Web Speech API</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Smart Device For Monitoring Asepsis And Pediatrics</h3>
+                        <p>Project focused on enhancing quality of life for youngsters and families through medical asepsis monitoring and facility practices.</p>
+                        <div class="project-tags">
+                            <span class="tag">IoT</span>
+                            <span class="tag">Healthcare</span>
+                            <span class="tag">Monitoring</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p>Responsive personal portfolio website built with modern web technologies, featuring dark/light theme toggle and interactive animations.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Anveshana-2K24</h3>
+                        <p>Participated in ANVESHNA competition in Palamner, India. Provided technical guidance and improved team efficiency.</p>
+                        <div class="project-tags">
+                            <span class="tag">Competition</span>
+                            <span class="tag">Research</span>
+                            <span class="tag">Innovation</span>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume-section">
+        <div class="container">
+            <h2 data-aos="fade-up">Complete Resume</h2>
+            <div class="resume-content">
+                <!-- Personal Information -->
+                <div class="resume-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="resume-header">
+                        <div class="resume-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3>Personal Information</h3>
+                    </div>
+                    <div class="resume-details">
+                        <div class="detail-item">
+                            <strong>Full Name:</strong> S Thousif
+                        </div>
+                        <div class="detail-item">
+                            <strong>Email:</strong> thousif9747@gmail.com
+                        </div>
+                        <div class="detail-item">
+                            <strong>Phone:</strong> +91 9014804054
+                        </div>
+                        <div class="detail-item">
+                            <strong>Address:</strong> 26-4-2660, Melapur, Hindupur, Sri Sathya Sai District - 515201
+                        </div>
+                        <div class="detail-item">
+                            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/thousif9747" target="_blank" rel="noopener">linkedin.com/in/thousif9747</a>
+                        </div>
+                        <div class="detail-item">
+                            <strong>GitHub:</strong> <a href="https://github.com/Thousif9747" target="_blank" rel="noopener">github.com/Thousif9747</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Career Objective -->
+                <div class="resume-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="resume-header">
+                        <div class="resume-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Career Objective</h3>
+                    </div>
+                    <div class="resume-details">
+                        <p>Aspiring Electronics and Communication Engineering graduate with a passion for web development and technology innovation. Seeking opportunities to leverage my technical skills in HTML, CSS, JavaScript, and emerging technologies to contribute to dynamic projects while continuing to grow professionally in the field of software development.</p>
+                    </div>
+                </div>
+
+                <!-- Education Details -->
+                <div class="resume-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="resume-header">
+                        <div class="resume-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Educational Qualifications</h3>
+                    </div>
+                    <div class="resume-details">
+                        <div class="education-item">
+                            <div class="education-header">
+                                <h4>Bachelor of Technology (B.Tech)</h4>
+                                <span class="education-year">2021 - 2025</span>
+                            </div>
+                            <p class="education-institution">Sri Sathya Sai Institute of Higher Learning</p>
+                            <p class="education-field">Electronics and Communication Engineering</p>
+                            <p class="education-grade"><strong>CGPA:</strong> 8.5/10</p>
+                        </div>
+                        
+                        <div class="education-item">
+                            <div class="education-header">
+                                <h4>Intermediate (12th Grade)</h4>
+                                <span class="education-year">2019 - 2021</span>
+                            </div>
+                            <p class="education-institution">Balayesu Jr College, Hindupur</p>
+                            <p class="education-field">Mathematics, Physics, Chemistry (MPC)</p>
+                            <p class="education-grade"><strong>Percentage:</strong> 70%</p>
+                        </div>
+                        
+                        <div class="education-item">
+                            <div class="education-header">
+                                <h4>Secondary School Certificate (SSC)</h4>
+                                <span class="education-year">2018 - 2019</span>
+                            </div>
+                            <p class="education-institution">Vailakanni Matha Vidyalaya, Hindupur</p>
+                            <p class="education-grade"><strong>GPA:</strong> 9.7/10</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Skills -->
+                <div class="resume-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="resume-header">
+                        <div class="resume-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Technical Skills</h3>
+                    </div>
+                    <div class="resume-details">
+                        <div class="skills-category">
+                            <h4>Programming Languages</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">HTML5</span>
+                                <span class="skill-tag">CSS3</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">C</span>
+                                <span class="skill-tag">C++</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skills-category">
+                            <h4>Web Technologies</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Responsive Design</span>
+                                <span class="skill-tag">Bootstrap</span>
+                                <span class="skill-tag">jQuery</span>
+                                <span class="skill-tag">AJAX</span>
+                                <span class="skill-tag">REST APIs</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skills-category">
+                            <h4>Tools & Software</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Git</span>
+                                <span class="skill-tag">GitHub</span>
+                                <span class="skill-tag">VS Code</span>
+                                <span class="skill-tag">Figma</span>
+                                <span class="skill-tag">Adobe Photoshop</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skills-category">
+                            <h4>Electronics & Hardware</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Arduino</span>
+                                <span class="skill-tag">Raspberry Pi</span>
+                                <span class="skill-tag">Circuit Design</span>
+                                <span class="skill-tag">PCB Design</span>
+                                <span class="skill-tag">IoT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Experience -->
+                <div class="resume-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="resume-header">
+                        <div class="resume-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="resume-details">
+                        <div class="work-item">
+                            <div class="work-header">
+                                <h4>Website Developer Intern</h4>
+                                <span class="work-period">May 2024 - June 2024</span>
+                            </div>
+                            <p class="work-company">Global Education Technology</p>
+                            <ul class="work-responsibilities">
+                                <li>Learned fundamentals of website development</li>
+                                <li>Built responsive designs and integrated interactive features</li>
+                                <li>Explored techniques to improve website performance and visibility</li>
+                                <li>Collaborated with team members on various web projects</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects -->
+                <div class="resume-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="resume-header">
+                        <div class="resume-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3>Key Projects</h3>
+                    </div>
+                    <div class="resume-details">
+                        <div class="project-resume-item">
+                            <h4>Smart Sorting System for Fruits and Vegetables</h4>
+                            <p>Developed an AI-based automated sorting system using HuskyLens and NodeMCU ESP32 to classify fruits based on ripeness and quality. Integrated machine vision for real-time detection and sorting, achieving over 95% accuracy under controlled conditions.</p>
+                            <div class="project-tech">
+                                <strong>Technologies:</strong> HuskyLens AI Vision, NodeMCU ESP32, Arduino IDE, Servo Motors, AI-based Image Processing
+                            </div>
+                        </div>
+                        
+                        <div class="project-resume-item">
+                            <h4>Rauf – AI Voice Assistant Web App</h4>
+                            <p>Built a multilingual AI voice assistant using React, featuring real-time speech recognition, natural language processing, and voice responses. Integrated features like weather updates, news, Wikipedia summaries, jokes, stories, and math calculations via API calls.</p>
+                            <div class="project-tech">
+                                <strong>Technologies:</strong> React.js, JavaScript, Web Speech API, REST APIs, HTML5, CSS3
+                            </div>
+                        </div>
+                        
+                        <div class="project-resume-item">
+                            <h4>Smart Device For Monitoring Asepsis And Pediatrics</h4>
+                            <p>Developed an IoT-based healthcare monitoring system focused on enhancing quality of life for youngsters and families through medical asepsis monitoring and facility practices.</p>
+                            <div class="project-tech">
+                                <strong>Technologies:</strong> IoT, Arduino, Sensors, Healthcare Monitoring
+                            </div>
+                        </div>
+                        
+                        <div class="project-resume-item">
+                            <h4>Portfolio Website</h4>
+                            <p>Created a responsive personal portfolio website featuring modern design, dark/light theme toggle, interactive animations, and contact form validation.</p>
+                            <div class="project-tech">
+                                <strong>Technologies:</strong> HTML5, CSS3, JavaScript, AOS Library, Responsive Design
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievements -->
+                <div class="resume-card" data-aos="fade-up" data-aos-delay="700">
+                    <div class="resume-header">
+                        <div class="resume-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Achievements & Certifications</h3>
+                    </div>
+                    <div class="resume-details">
+                        <ul class="achievement-list">
+                            <li>🏆 Participated in ANVESHNA-2K24 competition in Palamner, India</li>
+                            <li>🎓 Excellent academic performance with 9.7 GPA in SSC and 7.22 CGPA in B.Tech</li>
+                            <li>📜 Java Programming Certification from edX (2023)</li>
+                            <li>📜 Web Development Certification from SkillVertex (2024)</li>
+                            <li>💻 Successfully completed website development internships at SkillVertex and Global Education Technology</li>
+                            <li>🤝 Volunteer at LEO Club - participated in community service projects and fundraising events</li>
+                            <li>🌱 Volunteer at National Service Scheme (NSS) - environmental initiatives and social outreach programs</li>
+                            <li>🔧 Built multiple AI/IoT-based projects with over 95% accuracy in machine vision systems</li>
+                            <li>📱 Developed multilingual web applications with React.js and modern JavaScript</li>
+                            <li>🌟 Active participant in technical workshops and seminars</li>
+                            <li>🎯 Strong team collaboration and leadership skills through volunteer work</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Languages -->
+                <div class="resume-card" data-aos="fade-up" data-aos-delay="800">
+                    <div class="resume-header">
+                        <div class="resume-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="resume-details">
+                        <div class="language-proficiency">
+                            <div class="language-item">
+                                <span class="language-name">English</span>
+                                <span class="proficiency-level">Fluent</span>
+                            </div>
+                            <div class="language-item">
+                                <span class="language-name">Telugu</span>
+                                <span class="proficiency-level">Native</span>
+                            </div>
+                            <div class="language-item">
+                                <span class="language-name">Hindi</span>
+                                <span class="proficiency-level">Conversational</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interests -->
+                <div class="resume-card" data-aos="fade-up" data-aos-delay="900">
+                    <div class="resume-header">
+                        <div class="resume-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Interests & Hobbies</h3>
+                    </div>
+                    <div class="resume-details">
+                        <div class="interest-tags">
+                            <span class="interest-tag">⚛️ React.js Development</span>
+                            <span class="interest-tag">🤖 AI/IoT Projects</span>
+                            <span class="interest-tag">🎤 Voice Recognition Technology</span>
+                            <span class="interest-tag">🌐 Frontend Development</span>
+                            <span class="interest-tag">📚 Technology Blogs</span>
+                            <span class="interest-tag">🤝 Community Service</span>
+                            <span class="interest-tag">🎵 Music</span>
+                            <span class="interest-tag">📖 Reading</span>
+                            <span class="interest-tag">♟️ Chess</span>
+                            <span class="interest-tag">🏸 Badminton</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2>Get In Touch</h2>
+            <h2 data-aos="fade-up">Get In Touch</h2>
+            <p class="contact-subtitle" data-aos="fade-up" data-aos-delay="100">
+                Let's discuss your next project or just say hello!
+            </p>
             <div class="contact-content">
-                <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> thousif9747@gmail.com</p>
-                    <p><i class="fas fa-phone"></i> 9014804054</p>
-                    <p><i class="fas fa-map-marker-alt"></i> 26-4-2660, Melapur, Hindupur, Sri Sathya Sai District - 515201</p>
+                <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>thousif9747@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+91 9014804054</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>26-4-2660, Melapur, Hindupur<br>Sri Sathya Sai District - 515201</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-form">
-                    <form action="mailto:thousif9747@gmail.com" method="post" enctype="text/plain">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="message" placeholder="Your Message" required></textarea>
-                        <button type="submit" class="btn">Send Message</button>
+                
+                <div class="contact-form" data-aos="fade-left" data-aos-delay="300">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <span class="form-error" id="nameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <span class="form-error" id="emailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                            <span class="form-error" id="subjectError"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                            <span class="form-error" id="messageError"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i> Sending...
+                            </span>
+                        </button>
                     </form>
                 </div>
             </div>
@@ -139,13 +658,46 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 S Thousif. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://github.com/Thousif9747" target="_blank" rel="noopener" title="Visit my GitHub profile"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/thousif9747" target="_blank" rel="noopener" title="Visit my LinkedIn profile"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:thousif9747@gmail.com" title="Send me an email"><i class="fas fa-envelope"></i></a>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>S Thousif</h3>
+                    <p>Frontend Developer & ECE Student</p>
+                    <p>Building the future, one line of code at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#resume">Resume</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect With Me</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/Thousif9747" target="_blank" rel="noopener" title="Visit my GitHub profile"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/thousif9747" target="_blank" rel="noopener" title="Visit my LinkedIn profile"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:thousif9747@gmail.com" title="Send me an email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 S Thousif. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart"></i> and lots of coffee</p>
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button type="button" class="back-to-top" id="backToTop" title="Back to top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
